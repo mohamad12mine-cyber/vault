@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "vaultclicker",
+  "version": "1.0.0",
+  "name": "Vault Clicker",
+  "description": "Auto right-click vaults when the displayed item is one you selected.",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.vaultclicker.VaultClickerClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": ">=26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
