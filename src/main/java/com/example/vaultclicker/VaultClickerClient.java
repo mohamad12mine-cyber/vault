@@ -91,13 +91,13 @@ public class VaultClickerClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (openKey.consumeClick()) {
-                client.setScreen(new ConfigScreen());
+                client.gui.setScreen(new ConfigScreen());
             }
 
             if (cooldown > 0) cooldown--;
             if (!enabled || cooldown > 0) return;
             if (client.player == null || client.level == null || client.gameMode == null) return;
-            if (client.screen != null) return;
+            if (client.gui.screen() != null) return;
 
             ItemStack held = client.player.getMainHandItem();
             if (!held.is(Items.OMINOUS_TRIAL_KEY) && !held.is(Items.TRIAL_KEY)) return;
